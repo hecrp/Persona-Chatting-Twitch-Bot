@@ -1,0 +1,10 @@
+twitch_claude_bot/multi_engine_twitchbot
+temp
+config.yml
+claude_interactions.log
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/
+*.log

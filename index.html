@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Chatting - AI Twitch Bot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #5787a7;
+            color: #fff;
+            text-align: center;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+        }
+        h1 {
+            margin-bottom: 0.3rem;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 0.5rem;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .chat-example {
+            background-color: #18181b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .user {
+            color: #efeff1;
+        }
+        .bot {
+            color: #efeff1;
+        }
+        .username {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .chat-message ul {
+            margin: 5px 0 0 20px;
+            padding-left: 0;
+            color: #efeff1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Persona Chatting</h1>
+        <p>A multiengine AI-powered Twitch Bot</p>
+    </header>
+
+    <div class="container">
+        <h2>About the Project</h2>
+        <p>Persona Chatting is a personal project featuring a multiengine AI-powered Twitch bot that brings diverse interactions to a Twitch chat. Using advanced <a href="https://openai.com/api/">GPT</a> and <a href="https://www.anthropic.com/">Claude</a> language models, the bot responds to chat messages based on the persona of the character you choose.</p>
+
+        <p>Persona Chatting utilizes the GPT and Claude APIs to generate responses based on chat messages. The bot maintains its persona while providing entertaining and informative responses to viewers.</p>
+
+        <h3>Bot Commands</h3>
+        <ul>
+            <li><code>!prompt {text}</code>: prompts the current persona"</li>
+            <li><code>!persona_list</code>: Shows the list of available personas for the current engine</li>
+            <li><code>!persona {persona_id}</code>: Switches the current persona to the one specified by {persona_id}</li>
+            <li><code>!engine {gpt/claude}</code>: Switches the current engine to the one specified between gpt or claude</li>
+            <li><code>!help</code>: Displays available commands.</li>
+        </ul>
+        <h3>Example interactions</h3>
+        <div class="chat-example">
+            <div class="chat-message user">
+                <span class="username" style="color: #00ff00;">User:</span> !engine claude
+            </div>
+            <div class="chat-message bot">
+                <span class="username" style="color: #9146ff;">Bot:</span> Engine switched to Claude.
+            </div>
+
+            <div class="chat-message user">
+                <span class="username" style="color: #00ff00;">User:</span> !persona_list
+            </div>
+            <div class="chat-message bot">
+                <span class="username" style="color: #9146ff;">Bot:</span> Available personas for Claude:
+                <ul>
+                    <li>claude_the_wizard</li>
+                    <li>luna_starwhisper</li>
+                    <li>professor_quantum</li>
+                    <li>...</li>
+                </ul>
+            </div>
+
+            <div class="chat-message user">
+                <span class="username" style="color: #00ff00;">User:</span> !persona claude_the_wizard
+            </div>
+            <div class="chat-message bot">
+                <span class="username" style="color: #9146ff;">Bot:</span> Persona switched to Claude the Wizard.
+            </div>
+
+            <div class="chat-message user">
+                <span class="username" style="color: #00ff00;">User:</span> !prompt Cuál es la naturaleza de la magia?
+            </div>
+            <div class="chat-message bot">
+                <span class="username" style="color: #9146ff;">Claude the Wizard:</span> Ah, mi querido aprendiz, la magia es el tejido mismo del cosmos, entrelazado con los hilos de la realidad.
+            </div>
+        </div>
+
+        <h2>Get Started</h2>
+        <p>To add Persona Chatting to your Twitch stream, visit the <a href="https://github.com/yourusername/claude-the-wizard">GitHub repository</a> for installation instructions and documentation.</p>
+    </div>
+
+    <footer>
+        <p>&copy; Héctor Rodríguez (hecrp). 2024 Chatting Persona Project. MIT License.</p>
+    </footer>
+</body>
+</html>

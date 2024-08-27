@@ -1,0 +1,12 @@
+# Twitch Configuration
+twitch:
+  channel: "your_channel_name"
+  bot_username: "your_bot_username"
+  oauth_token: "your_oauth_token"
+
+# AI Engine API Keys
+ai_engines:
+  claude:
+    api_key: "your_claude_api_key"
+  gpt:
+    api_key: "your_gpt_api_key"
