@@ -13,7 +13,7 @@ This personal project consists of a Twitch chatbot that uses AI language models 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/twitch-claude-bot.git
+   git clone https://github.com/hecrp/Persona-Chatting-Twitch-Bot.git
    cd twitch-claude-bot
    ```
 
@@ -57,12 +57,12 @@ To run the Twitch Claude Bot using Docker, follow these steps:
 
 2. Build the Docker image:
    ```
-   docker build -t twitch-claude-bot .
+   docker build -t persona-chatting-bot .
    ```
 
 3. Run the Docker container:
    ```
-   docker run -d --name twitch-claude-bot twitch-claude-bot
+   docker run -d --name persona-chatting-bot persona-chatting-bot
    ```
 
    Note: Make sure your `config.yml` file is properly set up before building the Docker image.
