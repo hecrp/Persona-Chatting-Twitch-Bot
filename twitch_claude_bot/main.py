@@ -18,9 +18,15 @@ def load_config():
         # Si estamos en Read the Docs, usamos valores por defecto
         if os.environ.get('READTHEDOCS') == 'True':
             return {
-                'twitch': {'channel': 'example_channel'},
-                'openai': {'api_key': 'example_key'},
-                # ... otros valores por defecto ...
+                'twitch': {
+                    'channel': 'example_channel',
+                    'bot_username': 'example_bot',
+                    'oauth_token': 'example_oauth_token'
+                },
+                'ai_engines': {
+                    'claude': {'api_key': 'example_claude_key'},
+                    'gpt': {'api_key': 'example_gpt_key'}
+                }
             }
         else:
             raise FileNotFoundError(f"Config file '{config_path}' not found")

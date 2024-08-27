@@ -18,7 +18,6 @@ MAX_CONTEXT_MESSAGES = 10
 CONFIG_FILE = 'config.yml'
 PERSONAS_FILE = 'twitch_claude_bot/personas/gpt_personas.json'
 LOG_FILE = 'gpt_interactions.log'
-
 # Load configuration
 def load_config(file_name: str) -> Dict:
     """
@@ -39,7 +38,27 @@ def load_config(file_name: str) -> Dict:
         print(f"Error: '{file_name}' not found at {file_path}")
         return {}
 
-config = load_config(CONFIG_FILE)
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
+if on_rtd:
+    config = {
+        'ai_engines': {
+            'gpt': {
+                'api_key': 'mock_api_key'
+            },
+            'claude': {
+                'api_key': 'mock_claude_api_key'
+            }
+        },
+        'twitch': {
+            'channel': 'mock_channel',
+            'bot_username': 'mock_bot_username',
+            'oauth_token': 'mock_oauth_token'
+        }
+    }
+else:
+    config = load_config(CONFIG_FILE)
+    
 GPT_API_KEY = config.get('ai_engines', {}).get('gpt', {}).get('api_key', '')
 GPT_API_URL = 'https://api.openai.com/v1/chat/completions'
 
