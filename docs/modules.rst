@@ -1,5 +1,5 @@
 Twitch Chatting Bot
-=================
+===================
 
 .. toctree::
    :maxdepth: 4
