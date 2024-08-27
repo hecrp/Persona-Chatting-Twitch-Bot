@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def load_config():
-    config_path = 'config.yml'
+    config_path = '../config.yml'
     if not os.path.exists(config_path):
         # Si estamos en Read the Docs, usamos valores por defecto
         if os.environ.get('READTHEDOCS') == 'True':
