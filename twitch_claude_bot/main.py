@@ -6,9 +6,30 @@ It sets up logging and initializes the TwitchBot.
 
 from twitch_bot import TwitchBot
 import logging
+import os
+import yaml
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+def load_config():
+    config_path = 'config.yml'
+    if not os.path.exists(config_path):
+        # Si estamos en Read the Docs, usamos valores por defecto
+        if os.environ.get('READTHEDOCS') == 'True':
+            return {
+                'twitch': {'channel': 'example_channel'},
+                'openai': {'api_key': 'example_key'},
+                # ... otros valores por defecto ...
+            }
+        else:
+            raise FileNotFoundError(f"Config file '{config_path}' not found")
+    
+    with open(config_path, 'r') as file:
+        return yaml.safe_load(file)
+
+# Usa esta función en lugar de cargar directamente el archivo
+config = load_config()
 
 def main():
     """
